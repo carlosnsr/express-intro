@@ -12,3 +12,11 @@
   git add .
   git commit -m "Initial project setup"
 ```
+
+# Other Tools
+
+```
+   brew update
+   brew install httpie
+   npm install -g nodemon
+```

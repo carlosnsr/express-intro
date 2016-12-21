@@ -10,6 +10,6 @@ const server = app.listen(PORT, () => {
 // Handle Ctrl-C
 process.on('SIGINT', () => {
   server.close( () => {
-    console.log(color.green('\nServer manually terminated'))
+    console.log(color.green('\nServer successfully interrupted'))
   })
 })
