@@ -3,6 +3,13 @@ const app = express()
 const color = require('chalk')
 
 const PORT = 3000
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   console.log(color.green(`Listening on port ${PORT}`))
+})
+
+// Handle Ctrl-C
+process.on('SIGINT', () => {
+  server.close( () => {
+    console.log(color.green('\nServer manually terminated'))
+  })
 })
